@@ -41,8 +41,8 @@ use canvas::Canvas;
 */
 
 fn main() {
-    let point_count = 500;
-    let min_distance = 65.0;
+    let point_count = 1000;
+    let min_distance = 48.0;
 
     Canvas::new(point_count, min_distance).show();
 }

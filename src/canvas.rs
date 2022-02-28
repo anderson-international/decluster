@@ -65,13 +65,13 @@ impl Canvas {
         let points = self.points.as_mut().unwrap();
         self.window.draw_2d(e, |c, gl, _| {
             clear(constants::BLACK, gl);
-            for (i, point) in points.iter().enumerate() {
-                let colour = if (i + 1) % 100 == 0 {
-                    constants::RED
-                } else {
-                    constants::GREEN
-                };
-                rectangle(colour, [point.x, point.y, 5.0, 5.0], c.transform, gl);
+            for point in points {
+                rectangle(
+                    constants::GREEN,
+                    [point.x, point.y, 5.0, 5.0],
+                    c.transform,
+                    gl,
+                );
             }
         });
     }
