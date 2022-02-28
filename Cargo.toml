@@ -1,12 +1,17 @@
 [package]
 name = "decluster"
-description = "Iteratively declusters a randomised set of points."
-license = "MIT OR Apache-2.0"
-version = "1.0.1"
 edition = "2021"
 authors = [
     "Jonny Anderson <jonny@ail.im>"
 ]
+readme = "README.md"
+repository = "https://github.com/anderson-international/decluster"
+license = "MIT"
+keywords = ["nearest-neighbors", "decluster"]
+categories = ["algorithms"]
+description = "Iteratively declusters and replaces a randomised set of 2D points to find the maximally distributed set."
+version = "1.0.1"
+
 
 
 [[bin]]
