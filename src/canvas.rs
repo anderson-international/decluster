@@ -1,3 +1,4 @@
+//! The drawing surface and piston window used to display the set of points via the render and update window events
 use crate::{constants, decluster::decluster, point::Point};
 use graphics::{clear, rectangle};
 use piston::{RenderEvent, UpdateEvent};
@@ -12,8 +13,23 @@ pub struct Canvas {
 }
 
 impl Canvas {
-    pub fn new(window_title: String, point_count: usize, min_distance: f64) -> Self {
-        let window: PistonWindow = WindowSettings::new(&window_title, [0, 0])
+    /**
+    Returns a new canvas
+
+    # Arguments
+
+    * `point_count` - the number of points in the set
+    * `min_distance` - if a pair of points are closer than the `min_distance`, then one of the points will be removed and replaced with a fresh random [point](crate::point::Point)
+
+    # Examples
+
+    ```
+    use decluster::Canvas;
+    let canvas = Canvas::new(500, 60.0);
+    ```
+    */
+    pub fn new(point_count: usize, min_distance: f64) -> Self {
+        let window: PistonWindow = WindowSettings::new("decluster", [0, 0])
             .exit_on_esc(true)
             .fullscreen(true)
             .build()
