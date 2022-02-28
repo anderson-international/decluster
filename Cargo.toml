@@ -1,6 +1,8 @@
 [package]
 name = "decluster"
-version = "0.1.0"
+description = "Iteratively declusters a randomised set of points."
+license = "MIT OR Apache-2.0"
+version = "1.0.0"
 edition = "2021"
 authors = [
     "Jonny Anderson <jonny@ail.im>"
