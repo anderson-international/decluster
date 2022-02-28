@@ -2,8 +2,8 @@
 
 Iteratively declusters a randomised set of points.
 
-Declustering is the process of removing [points](crate::point::Point) in a result space that are considered too close together. This demo crate implements a custom
-[declustering algorithm](decluster)that works on an inital set of randomised 2D points finding and replacing clusters with new random points until it settles on the
+Declustering is the process of removing points in a result space that are considered too close together. This demo crate implements a custom
+declustering algorithm that works on an inital set of randomised 2D points finding and replacing clusters with new random points until it settles on the
 maximally declustered set, if that is acheivable. As the algorithm works the results are dynamically displayed in a window.
 
 ### Note
