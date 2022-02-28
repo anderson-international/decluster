@@ -10,7 +10,9 @@ license = "MIT"
 keywords = ["nearest-neighbors", "decluster"]
 categories = ["algorithms"]
 description = "Iteratively declusters and replaces a randomised set of 2D points to find the maximally distributed set."
-version = "1.0.2"
+
+
+version = "1.0.3"
 
 
 

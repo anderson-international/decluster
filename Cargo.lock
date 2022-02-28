@@ -349,7 +349,7 @@ dependencies = [
 
 [[package]]
 name = "decluster"
-version = "1.0.2"
+version = "1.0.3"
 dependencies = [
  "piston",
  "piston2d-graphics",
