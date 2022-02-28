@@ -9,7 +9,7 @@ maximally declustered set, if that is acheivable. As the algorithm works the res
 #### Note
 Depending on your window size, the number of points and the minimum distance you specify, it may not be possible to fit all the points in. In this case you will see the algorithm endlessly seek the best distribution but never settle down.
 
-There are interesting balance points where the set is hard to find but possible. In the xample below the screen size was [2560, 1440] and the point count was 1000. In this case the balance point exists when the minimum distance lies between 45 and 50. There are a very limited set of viable distributions that can fit all the points in whilst maintaining the specified distance and so you will see the algorithm take its time before eventually settling on a viable distribution. Increasing the minimum distance just a little from here will increase the difficulty further until eventually no viable solutions exist and the algorithm will cycle.
+There are interesting balance points where the set is hard to find but possible. In the example screenshots below the screen size was [2560, 1440] and the point count was 1000. In this case the balance point exists when the minimum distance lies between 45 and 50. There are a very limited set of viable distributions that can fit all the points in whilst maintaining the specified distance and so you will see the algorithm take its time before eventually settling on a viable distribution. Increasing the minimum distance just a little from here will increase the difficulty further until eventually no viable solutions exist and the algorithm will cycle.
 
 ##### Before - The initial random distribution of points
 ![Before](decluster_before.png)
