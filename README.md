@@ -11,8 +11,7 @@ Depending on your wondow size, the number of points and the minimum distance you
 continue to endlessly seek to distribute the points.
 
 There are interesting balance points where the set is hard to find but possible. For example, with a screen size of [2560, 1440] with
-500 points the balance point exists when the minimum distance lies between 65 and 70. That is when you will see the algorithm take its time but eventually settle on a nice, almost grid-like
-distribution.
+500 points the balance point exists when the minimum distance lies between 65 and 70. That is when you will see the algorithm take its time but eventually settle on a nice, almost grid-like distribution.
 
 ### Examples
 
