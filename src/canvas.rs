@@ -1,0 +1,71 @@
+use crate::{constants, decluster::decluster, point::Point};
+use graphics::{clear, rectangle};
+use piston::{RenderEvent, UpdateEvent};
+use piston_window::{PistonWindow, WindowSettings};
+
+pub struct Canvas {
+    window: PistonWindow,
+    points: Option<Vec<Point>>,
+    point_count: usize,
+    min_distance: f64,
+    window_size: [f64; 2],
+}
+
+impl Canvas {
+    pub fn new(window_title: String, point_count: usize, min_distance: f64) -> Self {
+        let window: PistonWindow = WindowSettings::new(&window_title, [0, 0])
+            .exit_on_esc(true)
+            .fullscreen(true)
+            .build()
+            .unwrap();
+
+        Self {
+            window,
+            points: None,
+            point_count,
+            min_distance,
+            window_size: [0.0, 0.0],
+        }
+    }
+
+    pub fn show(&mut self) {
+        while let Some(e) = self.window.next() {
+            if let Some(args) = e.render_args() {
+                self.render(&e, args);
+            }
+
+            if let Some(_) = e.update_args() {
+                self.update();
+            }
+        }
+    }
+
+    fn render(&mut self, e: &piston::Event, args: piston::RenderArgs) {
+        if let None = self.points {
+            self.points = Some(Point::rnd_vec(args.window_size, self.point_count));
+            self.window_size = args.window_size;
+        };
+
+        let points = self.points.as_mut().unwrap();
+        self.window.draw_2d(e, |c, gl, _| {
+            clear(constants::BLACK, gl);
+            for (i, point) in points.iter().enumerate() {
+                let colour = if (i + 1) % 100 == 0 {
+                    constants::RED
+                } else {
+                    constants::GREEN
+                };
+                rectangle(colour, [point.x, point.y, 5.0, 5.0], c.transform, gl);
+            }
+        });
+    }
+
+    fn update(&mut self) {
+        if let Some(points) = self.points.as_mut() {
+            let len = points.len();
+            decluster(points, self.min_distance);
+            let count = len - points.len();
+            points.append(&mut Point::rnd_vec(self.window_size, count));
+        }
+    }
+}
