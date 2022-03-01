@@ -1,23 +1,22 @@
 [package]
 name = "decluster"
 edition = "2021"
-authors = [
-    "Jonny Anderson <jonny@ail.im>"
-]
+authors = ["Jonny Anderson <jonny@ail.im>"]
 readme = "README.md"
 repository = "https://github.com/anderson-international/decluster"
 license = "MIT"
 keywords = ["nearest-neighbors", "decluster"]
 categories = ["algorithms"]
 description = "Iteratively declusters and replaces a randomised set of 2D points to find the maximally distributed set."
+version = "1.0.7"
 
-
-version = "1.0.6"
-
-
+[lib]
+name = "decluster"
+path = "src/lib/lib.rs"
 
 [[bin]]
-name = "decluster"
+name = "decluster-demo"
+path = "src/main.rs"
 
 [dependencies]
 piston = "0.53.1"

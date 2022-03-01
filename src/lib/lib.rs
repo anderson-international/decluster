@@ -1,9 +1,40 @@
-//! The drawing surface and piston window used to display the set of points.
-use crate::{constants, decluster::decluster, point::Point};
+/*!
+Performs a random search for a viable set of points where each point is separated from all other points by at least the specified minimum distance.
+It  works on an inital set of randomised 2D points finding and replacing clusters with new random points until it settles on the viable declustered set -
+if that is acheivable given the number of points and, the size of the window and minimum allowable distance.
+
+For more notes and a working example please see the decluster_demo crate that accompanies this lib.
+
+### Basic Usage
+
+```
+use decluster::Canvas;
+
+fn main() {
+    let point_count = 500;
+    let min_distance = 58.0;
+
+    Canvas::new(point_count, min_distance).show();
+}
+
+```
+*/
+
+extern crate graphics;
+extern crate piston;
+extern crate piston_window;
+extern crate rand;
+
+mod constants;
+mod decluster;
+mod point;
+
+use crate::point::Point;
 use graphics::{clear, rectangle};
 use piston::{RenderArgs, RenderEvent, UpdateEvent};
 use piston_window::{PistonWindow, WindowSettings};
 
+/// The drawing surface and piston window used to display the set of points.
 pub struct Canvas {
     window: PistonWindow,
     points: Option<Vec<Point>>,
@@ -19,7 +50,7 @@ impl Canvas {
     # Arguments
 
     * `point_count` - the number of points in the set
-    * `min_distance` - if a pair of points are closer than the `min_distance`, then one of the points will be removed and replaced with a fresh random [point](crate::point::Point)
+    * `min_distance` - if a pair of points are closer than the `min_distance`, then one of the points will be removed and replaced with a fresh random point
     */
     pub fn new(point_count: usize, min_distance: f64) -> Self {
         let window: PistonWindow = WindowSettings::new("decluster", [0, 0])
@@ -81,7 +112,7 @@ impl Canvas {
     fn update(&mut self) {
         if let Some(points) = self.points.as_mut() {
             let len = points.len();
-            decluster(points, self.min_distance);
+            decluster::decluster(points, self.min_distance);
             let count = len - points.len();
             points.append(&mut Point::rnd_vec(self.window_size, count));
         }

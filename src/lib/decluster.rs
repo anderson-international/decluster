@@ -9,7 +9,7 @@ Note that one a point is marked for removal there is no need to process it furth
 
 # Arguments
     * points - the vec of Point structures
-    * min_distance - the minimum allowed separtion distance between points
+    * min_distance - the minimum distance allowed between points
 */
 pub fn decluster(points: &mut Vec<Point>, min_distance: f64) {
     for i in 0..points.len() {
