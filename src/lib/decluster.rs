@@ -2,10 +2,10 @@
 use crate::point::Point;
 
 /**
- * The decluster algorithm cycles through the points set calculating the distnace between each pair of points. If that distance is greater than `max_distance`
-the point is marked for removal by the vec's `retain` function.
+ The decluster algorithm cycles through the points set calculating the distance between each pair of points. If that distance is greater than the `min_distance` then the point
+ is marked for removal by the vec's `retain` function.
 
-Note that one a point is marked for removal there is no need to process it further.
+Note that once a point is marked for removal there is no need to process it further.
 
 # Arguments
     * points - the vec of Point structures
