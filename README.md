@@ -16,12 +16,16 @@ There are interesting balance points where the set is hard to find but possible.
 ##### After - A viable set of distributed points where each point is separated by at least the minimum distance
 ![Before](decluster_after.png)
 
-### Examples
+### Basic Usage
 
-Basic Usage:
 ```
-let point_count = 1000;
-let min_distance = 47.0;
+use canvas::Canvas;
 
-Canvas::new(point_count, min_distance).show();
+fn main() {
+    let point_count = 1000;
+    let min_distance = 45.0;
+
+    Canvas::new(point_count, min_distance).show();
+}
+
 ```
