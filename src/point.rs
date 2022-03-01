@@ -1,6 +1,7 @@
 //! A 2D point representing a location in a results space.
-use rand::Rng;
 
+use rand::Rng;
+/// A 2D point representing a location in a results space.
 pub struct Point {
     pub x: f64,
     pub y: f64,

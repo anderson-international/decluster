@@ -4,22 +4,22 @@ It  works on an inital set of randomised 2D points finding and replacing cluster
 if that is acheivable given the number of points and, the size of the window and minimum allowable distance.
 
 For more notes and a working example please see the decluster_demo crate that accompanies this lib.
-
 */
+
+pub use decluster::decluster;
+pub use point::Point;
 
 extern crate graphics;
 extern crate piston;
 extern crate piston_window;
 extern crate rand;
 
-mod constants;
 mod decluster;
 mod point;
 
-use crate::point::Point;
 use graphics::{clear, rectangle};
 use piston::{RenderArgs, RenderEvent, UpdateEvent};
-use piston_window::{PistonWindow, WindowSettings};
+use piston_window::{color, PistonWindow, WindowSettings};
 
 /// The drawing surface and piston window used to display the set of points.
 pub struct Canvas {
@@ -81,14 +81,9 @@ impl Canvas {
 
         let points = self.points.as_mut().unwrap();
         self.window.draw_2d(e, |c, gl, _| {
-            clear(constants::BLACK, gl);
+            clear(color::BLACK, gl);
             for point in points {
-                rectangle(
-                    constants::GREEN,
-                    [point.x, point.y, 5.0, 5.0],
-                    c.transform,
-                    gl,
-                );
+                rectangle(color::GREEN, [point.x, point.y, 5.0, 5.0], c.transform, gl);
             }
         });
     }

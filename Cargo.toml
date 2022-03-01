@@ -10,13 +10,8 @@ categories = ["algorithms"]
 description = "Iteratively declusters and replaces a randomised set of 2D points until a set is discovered where each point is separated by at least the specified minimum distance."
 version = "1.1.0"
 
-[lib]
-name = "decluster"
-path = "src/lib/lib.rs"
-
-[[bin]]
-name = "decluster-demo"
-path = "src/main.rs"
+[[example]]
+name = "decluster_demo"
 
 [dependencies]
 piston = "0.53.1"
