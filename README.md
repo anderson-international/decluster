@@ -6,7 +6,7 @@ This demo uses the custom declustering algorithm to perform a random search for 
 Depending on your window size, the number of points and the minimum distance you specify, it may not be possible to fit all the points in. In this case you will see the algorithm
 endlessly seek the best distribution but never settle down.
 
-There are interesting balance points where the set is hard to find but possible. For example with a screen size was [2560, 1440] and a point count of 500 the balance point exists
+There are interesting balance points where the set is hard to find but possible. For example with a screen size of [2560, 1440] and a point count of 500 the balance point exists
 when the minimum distance lies between 55 and 60.
 
 With this setup there are a limited set of viable distributions that can fit all the points in whilst maintaining the specified distance. As a result you will see the algorithm
