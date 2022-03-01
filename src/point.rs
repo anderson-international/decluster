@@ -14,23 +14,18 @@ impl Point {
     # Arguments
 
     * - `window_size` - The size of the current window. This sets the upper limit for the x and y values
-    * - `count` - the number of points in the vectored vector
-
-    # Examples
-
-    ```
-    fn render(&mut self, e: &piston::Event, args: piston::RenderArgs) {
-        if let None = self.points {
-            self.points = Some(Point::rnd_vec(args.window_size, 500));
-        };
-    }
-    ```
+    * - `count` - the number of points in the vector
     */
     pub fn rnd_vec(window_size: [f64; 2], count: usize) -> Vec<Point> {
         (0..count).map(|_| Point::rnd(window_size)).collect()
     }
 
-    /// Generate a single random Point constrained by the the current wondow size
+    /**
+    Generate a single random Point constrained by the the current window size
+    # Arguments
+
+    * - `window_size` - The size of the current window. This sets the upper limit for the x and y values
+    */
     pub fn rnd(window_size: [f64; 2]) -> Point {
         let mut rng = rand::thread_rng();
         Point {

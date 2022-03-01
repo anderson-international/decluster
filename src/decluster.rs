@@ -1,4 +1,4 @@
-//! An iterative algorithm that replaces clustered points with random points until a maximally distributed set is acheived.
+//! An iterative algorithm that searches for a set of points where each point is separated from all others by at least the minimum specified distance.
 use crate::point::Point;
 
 /**
