@@ -19,7 +19,7 @@ no viable solutions exist and the algorithm will cycle.
 ```
 use decluster::Canvas;
 
-fn main() {
+pub fn main() {
     let point_count = 500;
     let min_distance = 58.0;
 
