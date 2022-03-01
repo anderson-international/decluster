@@ -16,7 +16,7 @@ no viable solutions exist and the algorithm will cycle.
 ##### Before - The initial random distribution of points
 ![Before](decluster_before.png)
 ##### After - A viable set of distributed points where each point is separated by at least the minimum distance
-![Before](decluster_after.png)
+![After](decluster_after.png)
 
 ### Basic Usage
 

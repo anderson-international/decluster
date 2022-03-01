@@ -7,8 +7,8 @@ repository = "https://github.com/anderson-international/decluster"
 license = "MIT"
 keywords = ["nearest-neighbors", "decluster"]
 categories = ["algorithms"]
-description = "Iteratively declusters and replaces a randomised set of 2D points to find the maximally distributed set."
-version = "1.0.8"
+description = "Iteratively declusters and replaces a randomised set of 2D points until a set is discovered where each point is separated by at least the specified minimum distance."
+version = "1.0.9"
 
 [lib]
 name = "decluster"
