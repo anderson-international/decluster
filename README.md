@@ -1,6 +1,6 @@
 # decluster
 
-This demo uses the custom declustering algorithm to perform a random search for a viable set of points where each point is separated from all other points by at least the specified minimum distance. It  works on an inital set of randomised 2D points finding and replacing clusters with new random points until it settles on a viable declustered set.
+This demo uses a custom declustering algorithm to perform a random search for a viable set of points where each point is separated from all other points by at least the specified minimum distance. It  works on an inital set of randomised 2D points finding and replacing clusters with new random points until it settles on a viable declustered set.
 
 ## Notes
 Depending on your window size, the number of points and the minimum distance you specify, it may not be possible to fit all the points in. In this case you will see the algorithm
