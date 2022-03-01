@@ -5,19 +5,6 @@ if that is acheivable given the number of points and, the size of the window and
 
 For more notes and a working example please see the decluster_demo crate that accompanies this lib.
 
-### Basic Usage
-
-```
-use decluster::Canvas;
-
-fn main() {
-    let point_count = 500;
-    let min_distance = 58.0;
-
-    Canvas::new(point_count, min_distance).show();
-}
-
-```
 */
 
 extern crate graphics;
