@@ -8,7 +8,7 @@ Depending on your window size, the number of points and the minimum distance you
 endlessly seek the best distribution but never settle down.
 
 There are interesting balance points where the set is hard to find but possible. For example with a screen size of [2560, 1440] and a point count of 500 the balance point exists
-when the minimum distance lies between 55 and 60.
+when the minimum distance lies between 60 and 70.
 
 With this setup there are a limited set of viable distributions that can fit all the points in whilst maintaining the specified distance. As a result you will see the algorithm
 take its time before eventually settling on a viable distribution. Increasing the minimum distance just a little from here will increase the difficulty further until eventually
@@ -24,8 +24,8 @@ The source for the demo is listed under the [examples](https://github.com/anders
 use decluster::Canvas;
 
 fn main() {
-    let point_count = 1000;
-    let min_distance = 48.0;
+    let point_count = 500;
+    let min_distance = 66.0;
 
     Canvas::new(point_count, min_distance).show();
 }
