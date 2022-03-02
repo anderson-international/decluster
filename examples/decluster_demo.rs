@@ -14,19 +14,11 @@ With this setup there are a limited set of viable distributions that can fit all
 take its time before eventually settling on a viable distribution. Increasing the minimum distance just a little from here will increase the difficulty further until eventually
 no viable solutions exist and the algorithm will cycle.
 
-### Basic Usage
+To compile and run the example use:
 
-```
-use decluster::Canvas;
+`> cargo run --example decluster_demo`
 
-pub fn main() {
-    let point_count = 500;
-    let min_distance = 58.0;
-
-    Canvas::new(point_count, min_distance).show();
-}
-
-```
+The source for the demo is listed under the [examples](https://github.com/anderson-international/decluster/tree/master/examples) directory on GitHub.
 */
 
 use decluster::Canvas;
