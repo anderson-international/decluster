@@ -29,6 +29,7 @@ Once you get it running then have play with the `point_count` and `min_distance`
 are increasingly hard to find.
 
 For example with a screen size of [2560, 1440] and a point count of 500 the balance point exists when the minimum distance lies between 55 and 60.
+
 With these numbers there exists a limited set of viable distributions that manage to fit all the points whilst maintaining the specified minimum distance.
 As a result you will see the algorithm take its time before eventually settling on a viable distribution. Increasing the minimum distance just a little from here
 will increase the difficulty further until eventually no viable solutions exist and the algorithm will cycle.
