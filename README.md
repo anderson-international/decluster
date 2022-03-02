@@ -38,16 +38,3 @@ will increase the difficulty further until eventually no viable solutions exist 
 ##### After - A viable set of distributed points where each point is separated by at least the minimum distance
 ![After](decluster_after.png)
 
-### Basic Usage
-
-```
-use decluster::Canvas;
-
-fn main() {
-    let point_count = 500;
-    let min_distance = 58.0;
-
-    Canvas::new(point_count, min_distance).show();
-}
-
-```
