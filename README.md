@@ -17,7 +17,7 @@ pub fn main() {
 
 ### Examples
 For more notes and a working example please see the decluster_demo example that accompanies this lib. The source for the demo is listed
-under the [examples](https://github.com/anderson-international/decluster/tree/master/examples) directory on GitHub.
+under the [examples](https://github.com/anderson-international/decluster/tree/master/examples) directory.
 
 To compile and run the example use:
 
