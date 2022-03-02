@@ -8,7 +8,7 @@ use decluster::Canvas;
 
 pub fn main() {
     let point_count = 500;
-    let min_distance = 58.0;
+    let min_distance = 66;
 
     Canvas::new(point_count, min_distance).show();
 }

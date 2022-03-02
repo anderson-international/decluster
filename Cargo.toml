@@ -8,7 +8,7 @@ license = "MIT"
 keywords = ["nearest-neighbors", "decluster"]
 categories = ["algorithms"]
 description = "Iteratively declusters and replaces a randomised set of 2D points until a set is discovered where each point is separated by at least the specified minimum distance."
-version = "1.0.17"
+version = "1.0.18"
 
 [[example]]
 name = "decluster_demo"
