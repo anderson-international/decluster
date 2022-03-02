@@ -24,8 +24,8 @@ The source for the demo is listed under the [examples](https://github.com/anders
 use decluster::Canvas;
 
 fn main() {
-    let point_count = 500;
-    let min_distance = 58.0;
+    let point_count = 1000;
+    let min_distance = 48.0;
 
     Canvas::new(point_count, min_distance).show();
 }

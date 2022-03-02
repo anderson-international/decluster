@@ -117,7 +117,7 @@ impl Canvas {
     }
     /**
     Declusters the current set of points then refills the set with new randomised points. This amounts to a random search for a viable set, that is a set of points
-    where each individual point is seprated by at least the minimum distance.
+    where each individual point is separated by at least the minimum distance.
     */
     fn update(&mut self) {
         if let Some(points) = self.points.as_mut() {
