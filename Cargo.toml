@@ -21,3 +21,7 @@ piston = "0.53.1"
 piston2d-graphics = "0.42.0"
 piston_window = "0.123.0"
 rand = "0.8.5"
+
+[[bin]]
+name="decluster_demo"
+path = "examples/decluster_demo.rs"
